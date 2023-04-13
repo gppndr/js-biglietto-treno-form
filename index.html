@@ -10,7 +10,78 @@
     <script src="./assets/js/script.js" defer></script>
 </head>
 
-<body>
+<body> 
+
+    <main id="site_main">
+        <div class="container">
+            <section id="ticketDatas">
+                <h2>Calcola il prezzo del tuo biglietto</h2>
+                <div class="row">
+                    <div id="ticketForm">
+                        <div class="customerDatas">
+                            <label for="passengerName">Nome e Cognome</label>
+                            <input type="text" name="passengerName" id="passengerName" placeholder="Es. Mario Rossi"
+                                maxlength="25">
+                        </div>
+                        <div class="customerDatas">
+                            <label for="travelKm">Km da percorrere</label>
+                            <input type="text" name="travelKm" id="travelKm" placeholder="Es. 27" maxlength="10">
+                        </div>
+                        <div class="customerDatas">
+                            <label for="passengerAge">Fascia d'età</label>
+                            <select name="passengerAge" id="passengerAge">
+                                <option value="underAge">Minorenne</option>
+                                <option value="adult">Maggiorenne</option>
+                                <option value="overAge">Over 65</option>
+                            </select>
+                        </div>
+                        <div class="buttons">
+                            <span id="createTicket">Genera</span>
+                            <span id="resetPage">Annulla</span>
+                        </div>
+                    </div>
+                    <!-- ./ticketForm -->
+                </div>
+            </section>
+            <!-- ./ticketDatas -->
+
+            <section id="ticketPrinted">
+                <h2>Anteprima biglietto</h2>
+                <div class="row">
+                    <div class="col">
+                            <h3>Dettaglio passeggeri</h3>
+                            <div class="ticketPrint">
+                                <div class="passengerInfo">
+                                    <h3>Nome Passeggero</h3>
+                                    <span id="name"></span>
+                                </div>
+                                <div class="ticketSection">
+                                    <span>Offerta</span>
+                                    <div id="ageDiscount">Sconto: </div>
+                                </div>
+                                <div class="ticketSection">
+                                    <h3>Carrozza</h3>
+                                    <span id="cabin"></span>
+                                </div>
+                                <div class="ticketSection">
+                                    <h3>Codice CP</h3>
+                                    <span id="cpCode"></span>
+                                </div>
+                                <div class="ticketSection">
+                                    <h3 >Costo biglietto</h3>
+                                    <span id="finalPrice"></span>
+                                </div>
+
+                            </div>
+                            <!-- ./ticketprint -->
+                    </div>
+                </div>
+            </section>
+            <!-- ./ticketPrinted -->
+        </div>
+        <!-- ./container -->
+    </main>
+    <!-- ./site_main -->
 
 </body>
 
