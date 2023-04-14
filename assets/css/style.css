@@ -38,6 +38,9 @@ h2{
   color: white;
   text-align: center;
 }
+.hidden{
+  display: none;
+}
 /* #region utilities */
 
 /* #region flex */
@@ -125,6 +128,9 @@ h2{
 }
 
 @media screen and (max-width: 991px) {
+  .container{
+  max-width: 700px;
+  }
     .justify-content-center-md{
         align-content: center;
     }

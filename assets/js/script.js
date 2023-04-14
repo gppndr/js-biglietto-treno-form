@@ -9,6 +9,7 @@ const ageDiscount = document.querySelector("#ageDiscount");
 const cabinNumber = document.querySelector("#cabin");
 const cpCode = document.querySelector("#cpCode");
 const price = document.querySelector("#finalPrice");
+const ticketPrinted = document.querySelector("#ticketPrinted")
 
 // age discount
 const underAgeDiscount = 20;
@@ -26,8 +27,9 @@ const inputs = document.querySelectorAll("input, select");
 // generate ticket
 
 createTicket.addEventListener("click", function () {
-  let ticketPrice = parseInt(travelKm.value)* 0.21;
+  let ticketPrice = (travelKm.value)* 0.21;
   userName.innerHTML = passengerName.value;
+  ticketPrinted.classList.remove("hidden");
 
   if (passengerAge.value == "underAge") {
     discount = (ticketPrice / 100) * underAgeDiscount;
@@ -51,12 +53,12 @@ createTicket.addEventListener("click", function () {
 
 // reset page
 resetPage.addEventListener("click", function () {
+  ticketPrinted.classList.add("hidden");
   inputs.forEach((input) => {
     if (input.type == "text" || input.type == "number") {
       input.value = "";
     }
   });
-  passengerName.value = "";
   userName.innerHTML = "";
   price.innerHTML = "";
   ageDiscount.innerHTML = "";
