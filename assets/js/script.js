@@ -26,7 +26,7 @@ const inputs = document.querySelectorAll("input, select");
 // generate ticket
 
 createTicket.addEventListener("click", function () {
-  let ticketPrice = travelKm.value * 0.21;
+  let ticketPrice = parseInt(travelKm.value)* 0.21;
   userName.innerHTML = passengerName.value;
 
   if (passengerAge.value == "underAge") {
@@ -52,7 +52,7 @@ createTicket.addEventListener("click", function () {
 // reset page
 resetPage.addEventListener("click", function () {
   inputs.forEach((input) => {
-    if (input.type == "text") {
+    if (input.type == "text" || input.type == "number") {
       input.value = "";
     }
   });
