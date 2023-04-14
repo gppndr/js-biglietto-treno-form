@@ -1,0 +1,136 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* color palette */
+:root {
+  --gray: #dce8ef;
+  --orange: #ffa502;
+}
+
+/* general rules */
+body {
+  background-color: var(--gray);
+}
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+#ticketDatas,
+#ticketPrinted {
+  max-width: 900px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+h2{
+  color: white;
+  text-align: center;
+}
+/* #region utilities */
+
+/* #region flex */
+.d-flex {
+  display: flex;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+[class*="col-"] {
+  flex: 0 0 auto;
+}
+
+.col-4 {
+  flex-basis: calc((100% / 12) * 4);
+  max-width: calc((100% / 12) * 4);
+}
+.col-12 {
+  flex-basis: calc((100% / 12) * 2);
+  max-width: calc((100% / 12) * 2);
+}
+.col-12 {
+  flex-basis: calc((100% / 12) * 12);
+  max-width: calc((100% / 12) * 12);
+}
+
+/* #region main */
+.bg-orange {
+  background-color: #ffa502;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.buttons {
+  margin: 1rem 0 1.5rem 0;
+}
+.btn {
+  padding: 5px 7px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-inline: 0.7rem;
+}
+.btn-red {
+  background-color: tomato;
+}
+.btn-blue {
+  background-color: royalblue;
+}
+.customerDatas, .passengerInfo, .ticketSection{
+  align-items: center;
+  padding: .5rem .7rem;
+}
+.customerDatas label, .passengerInfo h3, .ticketSection h3{
+  color: royalblue;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: .7rem;
+}
+.customerDatas input, .customerDatas select{
+  color: tomato;
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+  padding: .3rem .4rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.title{
+  text-align: center;
+  padding: 1rem 0;
+  color: tomato;
+}
+.passengerInfo span, .ticketSection span{
+  color: tomato;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 991px) {
+    .justify-content-center-md{
+        align-content: center;
+    }
+  .col-12-md {
+    flex-basis: calc((100% / 12) * 12);
+    max-width: calc((100% / 12) * 12);
+  }
+
+}
